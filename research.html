@@ -5,12 +5,86 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Research | Hwijin Baldick</title>
 <link rel="stylesheet" href="styles.css" />
+
+<style>
+  /* Page-specific refinement for Research page */
+
+  .research-section {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .research-section + .research-section {
+    border-top: 1px solid #e6e6e6;
+  }
+
+  .research-header {
+    max-width: 780px;
+    margin-bottom: 32px;
+  }
+
+  .research-header h2 {
+    margin: 0 0 12px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1f1f1f;
+  }
+
+  .research-header p {
+    margin: 0;
+    line-height: 1.8;
+    color: #555555;
+  }
+
+  .research-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .card {
+    display: block;
+    text-decoration: none;
+  }
+
+  .card h3 {
+    line-height: 1.4;
+  }
+
+  .card p {
+    line-height: 1.75;
+  }
+
+  .research-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #666666;
+  }
+
+  .industry-card {
+    max-width: 820px;
+  }
+
+  @media (max-width: 800px) {
+    .research-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
 </head>
+
 <body>
 
 <header>
   <div class="wrap nav">
     <a href="index.html" class="brand">Hwijin Baldick | PhD Candidate</a>
+
     <nav class="menu">
       <a href="index.html">Home</a>
       <a href="research.html">Research</a>
@@ -23,44 +97,142 @@
 </header>
 
 <main>
-<section class="page-hero">
-  <div class="wrap">
-    <div class="section-title">Research</div>
-    <h1>Research</h1>
-    <p class="subtitle">Selected projects and publications in hospitality, consumer behavior, lodging experience, big data analytics, and AI-powered behavioral modeling.</p>
-  </div>
-</section>
-<section>
-  <div class="wrap">
-    <div class="grid">
-      <article class="card">
-      <h3>Beyond the Human Touch: Exploring the Dynamics of Employees’ Trust in Human and Robotic Managers</h3>
-      <p>Examines how employees form trust in human, human-like robotic, and machine-like robotic managers in hospitality settings.</p>
-      <div class="meta">Cornell Hospitality Quarterly · In press · Link forthcoming</div>
-    </article><a class="card" href="https://scholar.google.com/scholar?q=Tricked%20into%20booking%3F%20The%20hidden%20influence%20of%20dark%20patterns%20on%20boutique%20hotel%20bookings" target="_blank" rel="noopener noreferrer">
-      <h3>Tricked into booking? The hidden influence of dark patterns on boutique hotel bookings</h3>
-      <p>Investigates how manipulative interface design shapes booking decisions in boutique hotel contexts.</p>
-      <div class="meta">International Journal of Hospitality Management · 2025 · View on Google Scholar →</div>
-    </a><a class="card" href="https://scholar.google.com/scholar?q=Emotion%20and%20memory%20in%20boutique%20hotel%20experiences%3A%20the%20role%20of%20event%20design" target="_blank" rel="noopener noreferrer">
-      <h3>Emotion and memory in boutique hotel experiences: the role of event design</h3>
-      <p>Analyzes how event design contributes to emotional response and memory formation in boutique hotel experiences.</p>
-      <div class="meta">International Journal of Contemporary Hospitality Management · 2025 · View on Google Scholar →</div>
-    </a><a class="card" href="https://scholar.google.com/scholar?q=Spending%20the%20night%20with%20strangers%20while%20traveling%3F%20Examining%20the%20antecedents%20of%20shared%20room%20booking%20through%20Airbnb" target="_blank" rel="noopener noreferrer">
-      <h3>Spending the night with strangers while traveling? Examining the antecedents of shared room booking through Airbnb</h3>
-      <p>Explores the factors that drive consumers to choose shared room bookings in peer-to-peer accommodation.</p>
-      <div class="meta">International Journal of Contemporary Hospitality Management · 2020 · View on Google Scholar →</div>
-    </a><a class="card" href="https://scholar.google.com/scholar?q=Physical%20Environments%20of%20Boutique%20Hotels%3A%20A%20Scale%20for%20Evaluation" target="_blank" rel="noopener noreferrer">
-      <h3>Physical Environments of Boutique Hotels: A Scale for Evaluation</h3>
-      <p>Develops a measurement-oriented perspective on the physical environment of boutique hotels.</p>
-      <div class="meta">Conference paper / research stream · View on Google Scholar →</div>
-    </a><a class="card" href="industry-report.html">
-      <h3>Guest Experience Insights: Independent vs. Chain Boutique Hotels in Chicago</h3>
-      <p>Compares independent and chain boutique hotels in Chicago through large-scale review analytics focused on room, sleep quality, cleanliness, service, location, and value.</p>
-      <div class="meta">CHRIBA Insights · 2025 · View report →</div>
-    </a>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="section-title">Research</div>
+
+      <h1>Research</h1>
+
+      <p class="subtitle">
+        Selected academic and industry-oriented research in hospitality, consumer behavior, lodging experience, big data analytics, and AI-powered behavioral modeling.
+      </p>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="research-section">
+    <div class="wrap">
+
+      <div class="research-header">
+        <span class="research-label">Academic Research</span>
+
+        <h2>Peer-reviewed and scholarly research</h2>
+
+        <p>
+          My academic research examines consumer behavior, lodging experience, service technology, boutique hotels, and AI-mediated decision making in hospitality and tourism contexts.
+        </p>
+      </div>
+
+      <div class="research-grid">
+
+        <article class="card">
+          <h3>Beyond the Human Touch: Exploring the Dynamics of Employees’ Trust in Human and Robotic Managers</h3>
+
+          <p>
+            Examines how employees form trust in human, human-like robotic, and machine-like robotic managers in hospitality settings.
+          </p>
+
+          <div class="meta">
+            Cornell Hospitality Quarterly · In press · Link forthcoming
+          </div>
+        </article>
+
+        <a class="card"
+           href="https://scholar.google.com/scholar?q=Tricked%20into%20booking%3F%20The%20hidden%20influence%20of%20dark%20patterns%20on%20boutique%20hotel%20bookings"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          <h3>Tricked into booking? The hidden influence of dark patterns on boutique hotel bookings</h3>
+
+          <p>
+            Investigates how manipulative interface design shapes booking decisions in boutique hotel contexts.
+          </p>
+
+          <div class="meta">
+            International Journal of Hospitality Management · 2025 · View on Google Scholar →
+          </div>
+        </a>
+
+        <a class="card"
+           href="https://scholar.google.com/scholar?q=Emotion%20and%20memory%20in%20boutique%20hotel%20experiences%3A%20the%20role%20of%20event%20design"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          <h3>Emotion and memory in boutique hotel experiences: the role of event design</h3>
+
+          <p>
+            Analyzes how event design contributes to emotional response and memory formation in boutique hotel experiences.
+          </p>
+
+          <div class="meta">
+            International Journal of Contemporary Hospitality Management · 2025 · View on Google Scholar →
+          </div>
+        </a>
+
+        <a class="card"
+           href="https://scholar.google.com/scholar?q=Spending%20the%20night%20with%20strangers%20while%20traveling%3F%20Examining%20the%20antecedents%20of%20shared%20room%20booking%20through%20Airbnb"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          <h3>Spending the night with strangers while traveling? Examining the antecedents of shared room booking through Airbnb</h3>
+
+          <p>
+            Explores the factors that drive consumers to choose shared room bookings in peer-to-peer accommodation.
+          </p>
+
+          <div class="meta">
+            International Journal of Contemporary Hospitality Management · 2020 · View on Google Scholar →
+          </div>
+        </a>
+
+        <a class="card"
+           href="https://scholar.google.com/scholar?q=Physical%20Environments%20of%20Boutique%20Hotels%3A%20A%20Scale%20for%20Evaluation"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          <h3>Physical Environments of Boutique Hotels: A Scale for Evaluation</h3>
+
+          <p>
+            Develops a measurement-oriented perspective on the physical environment of boutique hotels.
+          </p>
+
+          <div class="meta">
+            Conference paper / research stream · View on Google Scholar →
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="research-section">
+    <div class="wrap">
+
+      <div class="research-header">
+        <span class="research-label">Industry Research</span>
+
+        <h2>Applied research and industry analytics</h2>
+
+        <p>
+          My industry-oriented work translates hospitality data into practical insights for lodging stakeholders, with emphasis on guest experience, review analytics, and competitive benchmarking.
+        </p>
+      </div>
+
+      <a class="card industry-card" href="industry-report.html">
+        <h3>Guest Experience Insights: Independent vs. Chain Boutique Hotels in Chicago</h3>
+
+        <p>
+          Compares independent and chain boutique hotels in Chicago through large-scale review analytics focused on room, sleep quality, cleanliness, service, location, and value.
+        </p>
+
+        <div class="meta">
+          CHRIBA Insights · 2025 · View report →
+        </div>
+      </a>
+
+    </div>
+  </section>
+
 </main>
 
 <footer>

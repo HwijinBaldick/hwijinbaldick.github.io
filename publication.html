@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <title>Publications | Hwijin Baldick</title>
+
 <link rel="stylesheet" href="styles.css" />
 
 <style>
@@ -59,7 +62,9 @@
     align-items: center;
   }
 
-  .profile-detail a:hover { color: #249cc5; }
+  .profile-detail a:hover {
+    color: #249cc5;
+  }
 
   .profile-icon {
     width: 18px;
@@ -78,8 +83,13 @@
     display: block;
   }
 
-  .profile-icon.orcid { color: #a6ce39; }
-  .profile-icon.linkedin { color: #0a66c2; }
+  .profile-icon.orcid {
+    color: #a6ce39;
+  }
+
+  .profile-icon.linkedin {
+    color: #0a66c2;
+  }
 
   .publication-content h1 {
     margin: 0;
@@ -102,7 +112,9 @@
     scroll-margin-top: 104px;
   }
 
-  .publication-category.first { margin-top: 0; }
+  .publication-category.first {
+    margin-top: 0;
+  }
 
   .publication-note {
     margin: 0 0 12px;
@@ -115,7 +127,9 @@
     padding-left: 22px;
   }
 
-  .publication-item { padding: 7px 0; }
+  .publication-item {
+    padding: 7px 0;
+  }
 
   .publication-citation {
     margin: 0;
@@ -129,7 +143,9 @@
     border-bottom: 1px solid currentColor;
   }
 
-  .publication-link:hover { opacity: 0.75; }
+  .publication-link:hover {
+    opacity: 0.75;
+  }
 
   .conference-list {
     display: grid;
@@ -142,7 +158,9 @@
     border-bottom: 1px solid #e8e8e8;
   }
 
-  .conference-item:last-child { border-bottom: 0; }
+  .conference-item:last-child {
+    border-bottom: 0;
+  }
 
   .conference-meta {
     margin: 0 0 5px;
@@ -162,7 +180,9 @@
       gap: 36px;
     }
 
-    .profile-sidebar { position: static; }
+    .profile-sidebar {
+      position: static;
+    }
 
     .profile-sidebar img {
       width: 132px;
@@ -176,128 +196,514 @@
 
 <header>
   <div class="wrap nav">
-    <a href="index.html" class="brand">Hwijin Baldick | PhD Candidate</a>
+
+    <a href="index.html" class="brand">
+      Hwijin Baldick | PhD Candidate
+    </a>
+
     <nav class="menu" aria-label="Site navigation">
       <a href="index.html">Home</a>
       <a href="publication.html" aria-current="page">Publications</a>
       <a href="teaching.html">Teaching</a>
       <a href="contact.html">Contact</a>
     </nav>
+
   </div>
 </header>
 
 <main>
-  <section class="publication-section" aria-label="Publications">
-    <div class="wrap academic-layout">
 
-      <aside class="profile-sidebar" aria-label="Profile information">
-        <img src="profile-hwijin-baldick.jpg" alt="Portrait of Hwijin Baldick" />
-        <h2>Hwijin Baldick</h2>
-        <p class="profile-role">Ph.D. Candidate at Purdue University</p>
+<section class="publication-section" aria-label="Publications">
+  <div class="wrap academic-layout">
 
-        <div class="profile-details">
-          <div class="profile-detail">
-            <span class="profile-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.15 6.1 11.3 6.36 11.56a.9.9 0 0 0 1.28 0C12.9 20.3 19 14.15 19 9a7 7 0 0 0-7-7Zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" /></svg></span>
-            <span>West Lafayette, IN</span>
-          </div>
+    <aside class="profile-sidebar" aria-label="Profile information">
 
-          <div class="profile-detail">
-            <span class="profile-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 2.5 7v2h19V7L12 2ZM5 10v7H3v2h18v-2h-2v-7h-3v7h-2.5v-7h-3v7H8v-7H5Zm-2.5 10v2h19v-2h-19Z" /></svg></span>
-            <span>Purdue University</span>
-          </div>
+      <img
+        src="profile-hwijin-baldick.jpg"
+        alt="Portrait of Hwijin Baldick"
+      />
 
-          <div class="profile-detail"><span class="profile-icon" aria-hidden="true">✉</span><a href="mailto:jeon46@purdue.edu">Email</a></div>
-          <div class="profile-detail"><span class="profile-icon" aria-hidden="true">G</span><a href="https://scholar.google.com/citations?user=UAwXOSIAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a></div>
-          <div class="profile-detail"><span class="profile-icon orcid" aria-hidden="true">●</span><a href="https://orcid.org/0009-0008-6846-3008" target="_blank" rel="noopener noreferrer">ORCID</a></div>
-          <div class="profile-detail"><span class="profile-icon linkedin" aria-hidden="true">in</span><a href="https://www.linkedin.com/in/hwijinbaldick/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
-        </div>
-      </aside>
+      <h2>Hwijin Baldick</h2>
 
-      <div class="publication-content">
-        <h1>Publications</h1>
-        <p class="publication-summary">Peer-reviewed journal articles, manuscripts, working papers, industry publications, and conference presentations.</p>
+      <p class="profile-role">
+        Ph.D. Candidate at Purdue University
+      </p>
 
-        <h2 class="publication-category first">Peer-Reviewed Journal Articles</h2>
-        <ol class="publication-list">
-          <li class="publication-item"><p class="publication-citation"><strong>Baldick, H.</strong>, &amp; Gordon, S. E. (2026). Beyond the human touch: Exploring the dynamics of employees’ trust in human and robotic managers. <em>Cornell Hospitality Quarterly, 67</em>(3), 336–356. <a class="publication-link" href="https://doi.org/10.1177/19389655261433931" target="_blank" rel="noopener noreferrer">Article</a></p></li>
-          <li class="publication-item"><p class="publication-citation"><strong>Baldick, H.</strong>, &amp; Jang, S. (2025). Emotion and memory in boutique hotel experiences: The role of event design. <em>International Journal of Contemporary Hospitality Management, 37</em>(13), 123–148. <a class="publication-link" href="https://doi.org/10.1108/IJCHM-01-2025-0153" target="_blank" rel="noopener noreferrer">Article</a></p></li>
-          <li class="publication-item"><p class="publication-citation"><strong>Baldick, H.</strong>, &amp; Jang, S. S. (2025). Tricked into booking? The hidden influence of dark patterns on boutique hotel bookings. <em>International Journal of Hospitality Management, 131</em>, 104304. <a class="publication-link" href="https://doi.org/10.1016/j.ijhm.2025.104304" target="_blank" rel="noopener noreferrer">Article</a></p></li>
-          <li class="publication-item"><p class="publication-citation"><strong>Baldick, H. J.</strong>, &amp; Jang, S. (Shawn). (2020). Spending the night with strangers while traveling? Examining the antecedents of shared room booking through Airbnb. <em>International Journal of Contemporary Hospitality Management, 32</em>(12), 3853–3871. <a class="publication-link" href="https://doi.org/10.1108/IJCHM-09-2018-0722" target="_blank" rel="noopener noreferrer">Article</a></p></li>
-        </ol>
+      <div class="profile-details">
 
-        <h2 class="publication-category">Working Papers</h2>
-        <ul class="publication-list">
-          <li class="publication-item"><p class="publication-citation"><strong>Baldick, H.</strong>, &amp; Jang, S. (Shawn). (2026). AI-mediated hotel search. Big data and algorithmic AI audit; manuscript in preparation.</p></li>
-          <li class="publication-item"><p class="publication-citation"><strong>Baldick, H.</strong>, &amp; Jang, S. (Shawn). (2026). Guest experience in glamping. Big data; manuscript in preparation.</p></li>
-          <li class="publication-item"><p class="publication-citation"><strong>Baldick, H.</strong>, &amp; Jang, S. (Shawn). (2026). Hospital-adjacent hotels. Big data; manuscript in preparation.</p></li>
-          <li class="publication-item"><p class="publication-citation"><strong>Baldick, H.</strong>, &amp; Jang, S. (Shawn). (2026). Service failure in hotel loyalty apps. Big data and scenario experiment; data analysis in progress.</p></li>
-        </ul>
+        <div class="profile-detail">
+          <span class="profile-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2a7 7 0 0 0-7 7c0 5.15 6.1 11.3 6.36
+                11.56a.9.9 0 0 0 1.28 0C12.9 20.3 19 14.15
+                19 9a7 7 0 0 0-7-7Zm0 10a3 3 0 1 1
+                0-6 3 3 0 0 1 0 6Z"
+              />
+            </svg>
+          </span>
 
-        <h2 class="publication-category" id="industry-publications">Industry Publications</h2>
-        <p class="publication-note">Practitioner-facing publications developed for the Center for Hospitality and Retail Industries Business Analytics (CHRIBA).</p>
-        <ol class="publication-list">
-          <li class="publication-item"><p class="publication-citation"><strong>Baldick, H. J.</strong>, &amp; Jang, S. (Shawn). (2026). Why where theme fit pays off: Designing boutique hotel experiences guests remember. <em>CHRIBA Brief</em>, 16. <a class="publication-link" href="https://www.chriba-purdue.com/chriba-brief" target="_blank" rel="noopener noreferrer">Publication</a></p></li>
-          <li class="publication-item"><p class="publication-citation"><strong>Baldick, H. J.</strong>, &amp; Jang, S. (Shawn). (2026). Responding is not resolving: More replies, same complaints. <em>CHRIBA Insights, 4</em>(2). <a class="publication-link" href="CHRIBA%20Insights%20-%20Vol.%204%20No%202.pdf" target="_blank" rel="noopener noreferrer">PDF</a></p></li>
-          <li class="publication-item"><p class="publication-citation"><strong>Baldick, H. J.</strong>, &amp; Jang, S. (Shawn). (2026). Why OTA deception harms independent hotels—and how to fight back. <em>CHRIBA Brief</em>, 15. <a class="publication-link" href="https://www.chriba-purdue.com/chriba-brief" target="_blank" rel="noopener noreferrer">Publication</a></p></li>
-          <li class="publication-item"><p class="publication-citation"><strong>Baldick, H. J.</strong>, &amp; Jang, S. (Shawn). (2025). Guest experience insights: Independent vs. chain boutique hotels in Chicago. <em>CHRIBA Insights, 3</em>(6). <a class="publication-link" href="boutique-hotel-industry-report.pdf" target="_blank" rel="noopener noreferrer">PDF</a></p></li>
-        </ol>
-
-        <h2 class="publication-category">Conference Presentations</h2>
-        <div class="conference-list">
-          <article class="conference-item">
-            <p class="conference-meta">2026 · 31st Graduate Conference in Hospitality and Tourism · Auburn, AL</p>
-            <p class="conference-title">Full Paper: Paths to Well-Being: How Biophilic Hotel Design Fosters Transformative Experience in Older Adults (Stand-up Presentation)</p>
-          </article>
-
-          <article class="conference-item">
-            <p class="conference-meta">2025 · 30th Graduate Conference in Hospitality and Tourism · Houston, TX</p>
-            <p class="conference-title">Full Paper: Unlocking Guest Engagement: The Power of Interactive Digital Signage in Hotels (Stand-up Presentation)</p>
-          </article>
-
-          <article class="conference-item">
-            <p class="conference-meta">2024 · Annual ICHRIE Conference · Montreal, Quebec, Canada</p>
-            <p class="conference-title">Full Paper: Beyond Accommodation: The Effects of Entertainment, Education, Aesthetics, and Escapism in Boutique Hotels (Stand-up Presentation)</p>
-            <p class="conference-title">Poster: Does Manager Type (Human vs. Human-like Robot vs. Machine-like Robot) Influence Employees’ Perceived Trust in the Hospitality Industry?</p>
-          </article>
-
-          <article class="conference-item">
-            <p class="conference-meta">2024 · 29th Graduate Conference in Hospitality and Tourism · Miami, FL</p>
-            <p class="conference-title">Poster: Deciphering Digital Nomad Decision Triggers: A Holistic Examination</p>
-            <p class="conference-title">Poster: Beyond Design: IoT Integration and Emotional Well-Being Among Minimalist Hotel Guests</p>
-          </article>
-
-          <article class="conference-item">
-            <p class="conference-meta">2023 · 28th Graduate Conference in Hospitality and Tourism · Orange, CA</p>
-            <p class="conference-title">Full Paper: Which Core Competency Is More Critical for Boutique Hotels? Employee Service or Facilities (Stand-up Presentation)</p>
-          </article>
-
-          <article class="conference-item">
-            <p class="conference-meta">2022 · 27th Asia Pacific Tourism Association Conference · Jeju, South Korea</p>
-            <p class="conference-title">Full Paper: Physical Environments of Boutique Hotels: A Scale for Evaluation (Stand-up Presentation)</p>
-          </article>
-
-          <article class="conference-item">
-            <p class="conference-meta">2018 · 17th Asia Pacific Forum in Hospitality and Tourism · Honolulu, HI</p>
-            <p class="conference-title">Presentation: How Travelers Find Special Experience? An Examination of Boutique Hotels (Stand-up Presentation)</p>
-          </article>
-
-          <article class="conference-item">
-            <p class="conference-meta">2018 · 23rd Graduate Conference in Hospitality and Tourism · Dallas, TX</p>
-            <p class="conference-title">Presentation: Spending the Night with Strangers While Traveling? Examining the Antecedents of Shared Room Booking Through Airbnb (Stand-up Presentation)</p>
-          </article>
+          <span>West Lafayette, IN</span>
         </div>
 
-        <h2 class="publication-category">Thesis</h2>
-        <ul class="publication-list">
-          <li class="publication-item"><p class="publication-citation"><strong>Jeon, H.</strong> (2018). <em>Physical environments of boutique hotels: A scale for evaluation</em> (Master’s thesis). <a class="publication-link" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UAwXOSIAAAAJ&amp;citation_for_view=UAwXOSIAAAAJ:d1gkVwhDpl0C" target="_blank" rel="noopener noreferrer">Thesis</a></p></li>
-        </ul>
+        <div class="profile-detail">
+          <span class="profile-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2 2.5 7v2h19V7L12 2ZM5 10v7H3v2h18v-2h-2v-7h-3v7h-2.5v-7h-3v7H8v-7H5Zm-2.5 10v2h19v-2h-19Z"
+              />
+            </svg>
+          </span>
+
+          <span>Purdue University</span>
+        </div>
+
+        <div class="profile-detail">
+          <span class="profile-icon" aria-hidden="true">✉</span>
+          <a href="mailto:jeon46@purdue.edu">Email</a>
+        </div>
+
+        <div class="profile-detail">
+          <span class="profile-icon" aria-hidden="true">G</span>
+
+          <a
+            href="https://scholar.google.com/citations?user=UAwXOSIAAAAJ&amp;hl=en&amp;oi=ao"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Scholar
+          </a>
+        </div>
+
+        <div class="profile-detail">
+          <span class="profile-icon orcid" aria-hidden="true">●</span>
+
+          <a
+            href="https://orcid.org/0009-0008-6846-3008"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ORCID
+          </a>
+        </div>
+
+        <div class="profile-detail">
+          <span class="profile-icon linkedin" aria-hidden="true">in</span>
+
+          <a
+            href="https://www.linkedin.com/in/hwijinbaldick/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+
       </div>
+    </aside>
+
+    <div class="publication-content">
+
+      <h1>Publications</h1>
+
+      <p class="publication-summary">
+        Peer-reviewed journal articles, manuscripts under review, working
+        papers, industry publications, and conference presentations.
+      </p>
+
+      <h2 class="publication-category first">
+        Peer-Reviewed Journal Articles
+      </h2>
+
+      <ol class="publication-list">
+
+        <li class="publication-item">
+          <p class="publication-citation">
+            <strong>Baldick, H.</strong>, &amp; Gordon, S. E. (2026).
+            Beyond the human touch: Exploring the dynamics of employees’
+            trust in human and robotic managers.
+            <em>Cornell Hospitality Quarterly, 67</em>(3), 336–356.
+            <a
+              class="publication-link"
+              href="https://doi.org/10.1177/19389655261433931"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Article
+            </a>
+          </p>
+        </li>
+
+        <li class="publication-item">
+          <p class="publication-citation">
+            <strong>Baldick, H.</strong>, &amp; Jang, S. (2025).
+            Emotion and memory in boutique hotel experiences:
+            The role of event design.
+            <em>
+              International Journal of Contemporary Hospitality Management,
+              37
+            </em>(13), 123–148.
+            <a
+              class="publication-link"
+              href="https://doi.org/10.1108/IJCHM-01-2025-0153"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Article
+            </a>
+          </p>
+        </li>
+
+        <li class="publication-item">
+          <p class="publication-citation">
+            <strong>Baldick, H.</strong>, &amp; Jang, S. S. (2025).
+            Tricked into booking? The hidden influence of dark patterns
+            on boutique hotel bookings.
+            <em>International Journal of Hospitality Management, 131</em>,
+            104304.
+            <a
+              class="publication-link"
+              href="https://doi.org/10.1016/j.ijhm.2025.104304"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Article
+            </a>
+          </p>
+        </li>
+
+        <li class="publication-item">
+          <p class="publication-citation">
+            <strong>Baldick, H. J.</strong>, &amp; Jang, S. (Shawn).
+            (2020). Spending the night with strangers while traveling?
+            Examining the antecedents of shared room booking through Airbnb.
+            <em>
+              International Journal of Contemporary Hospitality Management,
+              32
+            </em>(12), 3853–3871.
+            <a
+              class="publication-link"
+              href="https://doi.org/10.1108/IJCHM-09-2018-0722"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Article
+            </a>
+          </p>
+        </li>
+
+      </ol>
+
+      <h2 class="publication-category">
+        Manuscripts Under Review
+      </h2>
+
+      <ul class="publication-list">
+
+        <li class="publication-item">
+          <p class="publication-citation">
+            Jang, S. (Shawn), &amp; <strong>Baldick, H.</strong>
+            Decomposing spatial advantage in peer-to-peer accommodation:
+            Accessibility, host commercialization, and guest evaluation.
+            <em>Manuscript under review.</em>
+          </p>
+        </li>
+
+        <li class="publication-item">
+          <p class="publication-citation">
+            <strong>Baldick, H.</strong>, &amp; Jang, S. (Shawn).
+            Feeling and interpreting nature: Affective and cognitive pathways
+            in older adults’ appraisals of biophilic hotels.
+            <em>Manuscript under review.</em>
+          </p>
+        </li>
+
+        <li class="publication-item">
+          <p class="publication-citation">
+            <strong>Baldick, H.</strong>, &amp; Jang, S. (Shawn).
+            Beyond the message framing: Reimagining how we market destinations
+            to digital nomads.
+            <em>Second revision submitted.</em>
+          </p>
+        </li>
+
+      </ul>
+
+      <h2 class="publication-category">
+        Working Papers
+      </h2>
+
+      <ul class="publication-list">
+
+        <li class="publication-item">
+          <p class="publication-citation">
+            <strong>Baldick, H.</strong>, &amp; Jang, S. (Shawn). (2026).
+            AI-mediated hotel search. Big data and algorithmic AI audit;
+            manuscript in preparation.
+          </p>
+        </li>
+
+        <li class="publication-item">
+          <p class="publication-citation">
+            <strong>Baldick, H.</strong>, &amp; Jang, S. (Shawn). (2026).
+            Guest experience in glamping. Big data; manuscript in preparation.
+          </p>
+        </li>
+
+        <li class="publication-item">
+          <p class="publication-citation">
+            <strong>Baldick, H.</strong>, &amp; Jang, S. (Shawn). (2026).
+            Hospital-adjacent hotels. Big data; manuscript in preparation.
+          </p>
+        </li>
+
+        <li class="publication-item">
+          <p class="publication-citation">
+            <strong>Baldick, H.</strong>, &amp; Jang, S. (Shawn). (2026).
+            Service failure in hotel loyalty apps. Big data and scenario
+            experiment; data analysis in progress.
+          </p>
+        </li>
+
+      </ul>
+
+      <h2
+        class="publication-category"
+        id="industry-publications"
+      >
+        Industry Publications
+      </h2>
+
+      <p class="publication-note">
+        Practitioner-facing publications developed for the Center for
+        Hospitality and Retail Industries Business Analytics (CHRIBA).
+      </p>
+
+      <ol class="publication-list">
+
+        <li class="publication-item">
+          <p class="publication-citation">
+            <strong>Baldick, H. J.</strong>, &amp; Jang, S. (Shawn).
+            (2026). Why where theme fit pays off: Designing boutique hotel
+            experiences guests remember. <em>CHRIBA Brief</em>, 16.
+            <a
+              class="publication-link"
+              href="https://www.chriba-purdue.com/chriba-brief"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Publication
+            </a>
+          </p>
+        </li>
+
+        <li class="publication-item">
+          <p class="publication-citation">
+            <strong>Baldick, H. J.</strong>, &amp; Jang, S. (Shawn).
+            (2026). Responding is not resolving: More replies, same
+            complaints. <em>CHRIBA Insights, 4</em>(2).
+            <a
+              class="publication-link"
+              href="CHRIBA%20Insights%20-%20Vol.%204%20No%202.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              PDF
+            </a>
+          </p>
+        </li>
+
+        <li class="publication-item">
+          <p class="publication-citation">
+            <strong>Baldick, H. J.</strong>, &amp; Jang, S. (Shawn).
+            (2026). Why OTA deception harms independent hotels—and how
+            to fight back. <em>CHRIBA Brief</em>, 15.
+            <a
+              class="publication-link"
+              href="https://www.chriba-purdue.com/chriba-brief"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Publication
+            </a>
+          </p>
+        </li>
+
+        <li class="publication-item">
+          <p class="publication-citation">
+            <strong>Baldick, H. J.</strong>, &amp; Jang, S. (Shawn).
+            (2025). Guest experience insights: Independent vs. chain
+            boutique hotels in Chicago.
+            <em>CHRIBA Insights, 3</em>(6).
+            <a
+              class="publication-link"
+              href="boutique-hotel-industry-report.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              PDF
+            </a>
+          </p>
+        </li>
+
+      </ol>
+
+      <h2 class="publication-category">
+        Conference Presentations
+      </h2>
+
+      <div class="conference-list">
+
+        <article class="conference-item">
+          <p class="conference-meta">
+            2026 · 31st Graduate Conference in Hospitality and Tourism ·
+            Auburn, AL
+          </p>
+
+          <p class="conference-title">
+            Full Paper: Paths to Well-Being: How Biophilic Hotel Design
+            Fosters Transformative Experience in Older Adults
+            (Stand-up Presentation)
+          </p>
+        </article>
+
+        <article class="conference-item">
+          <p class="conference-meta">
+            2025 · 30th Graduate Conference in Hospitality and Tourism ·
+            Houston, TX
+          </p>
+
+          <p class="conference-title">
+            Full Paper: Unlocking Guest Engagement: The Power of Interactive
+            Digital Signage in Hotels (Stand-up Presentation)
+          </p>
+        </article>
+
+        <article class="conference-item">
+          <p class="conference-meta">
+            2024 · Annual ICHRIE Conference · Montreal, Quebec, Canada
+          </p>
+
+          <p class="conference-title">
+            Full Paper: Beyond Accommodation: The Effects of Entertainment,
+            Education, Aesthetics, and Escapism in Boutique Hotels
+            (Stand-up Presentation)
+          </p>
+
+          <p class="conference-title">
+            Poster: Does Manager Type (Human vs. Human-like Robot vs.
+            Machine-like Robot) Influence Employees’ Perceived Trust
+            in the Hospitality Industry?
+          </p>
+        </article>
+
+        <article class="conference-item">
+          <p class="conference-meta">
+            2024 · 29th Graduate Conference in Hospitality and Tourism ·
+            Miami, FL
+          </p>
+
+          <p class="conference-title">
+            Poster: Deciphering Digital Nomad Decision Triggers:
+            A Holistic Examination
+          </p>
+
+          <p class="conference-title">
+            Poster: Beyond Design: IoT Integration and Emotional Well-Being
+            Among Minimalist Hotel Guests
+          </p>
+        </article>
+
+        <article class="conference-item">
+          <p class="conference-meta">
+            2023 · 28th Graduate Conference in Hospitality and Tourism ·
+            Orange, CA
+          </p>
+
+          <p class="conference-title">
+            Full Paper: Which Core Competency Is More Critical for Boutique
+            Hotels? Employee Service or Facilities
+            (Stand-up Presentation)
+          </p>
+        </article>
+
+        <article class="conference-item">
+          <p class="conference-meta">
+            2022 · 27th Asia Pacific Tourism Association Conference ·
+            Jeju, South Korea
+          </p>
+
+          <p class="conference-title">
+            Full Paper: Physical Environments of Boutique Hotels:
+            A Scale for Evaluation (Stand-up Presentation)
+          </p>
+        </article>
+
+        <article class="conference-item">
+          <p class="conference-meta">
+            2018 · 17th Asia Pacific Forum in Hospitality and Tourism ·
+            Honolulu, HI
+          </p>
+
+          <p class="conference-title">
+            Presentation: How Travelers Find Special Experience?
+            An Examination of Boutique Hotels
+            (Stand-up Presentation)
+          </p>
+        </article>
+
+        <article class="conference-item">
+          <p class="conference-meta">
+            2018 · 23rd Graduate Conference in Hospitality and Tourism ·
+            Dallas, TX
+          </p>
+
+          <p class="conference-title">
+            Presentation: Spending the Night with Strangers While Traveling?
+            Examining the Antecedents of Shared Room Booking Through Airbnb
+            (Stand-up Presentation)
+          </p>
+        </article>
+
+      </div>
+
+      <h2 class="publication-category">
+        Thesis
+      </h2>
+
+      <ul class="publication-list">
+
+        <li class="publication-item">
+          <p class="publication-citation">
+            <strong>Jeon, H.</strong> (2018).
+            <em>
+              Physical environments of boutique hotels:
+              A scale for evaluation
+            </em>
+            (Master’s thesis).
+            <a
+              class="publication-link"
+              href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=UAwXOSIAAAAJ&amp;citation_for_view=UAwXOSIAAAAJ:d1gkVwhDpl0C"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Thesis
+            </a>
+          </p>
+        </li>
+
+      </ul>
+
     </div>
-  </section>
+  </div>
+</section>
+
 </main>
 
 <footer>
-  <div class="wrap">© 2026 Hwijin Baldick. All rights reserved.</div>
+  <div class="wrap">
+    © 2026 Hwijin Baldick. All rights reserved.
+  </div>
 </footer>
 
 </body>

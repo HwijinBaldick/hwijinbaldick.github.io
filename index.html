@@ -21,6 +21,89 @@
   .award-link:hover {
     opacity: 0.75;
   }
+
+  .hero .hero-grid {
+    grid-template-columns: 220px minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 4.7vw, 52px);
+  }
+
+  .hero-profile {
+    padding-top: 2px;
+  }
+
+  .hero-profile .hero-photo {
+    margin-bottom: 18px;
+  }
+
+  .profile-name {
+    margin: 0 0 3px;
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+
+  .profile-role {
+    margin: 0 0 20px;
+    color: #555555;
+    font-size: 0.9rem;
+  }
+
+  .profile-details {
+    display: grid;
+    gap: 9px;
+    font-size: 0.88rem;
+    color: #4f4f4f;
+  }
+
+  .profile-detail {
+    display: grid;
+    grid-template-columns: 18px minmax(0, 1fr);
+    gap: 8px;
+    align-items: center;
+  }
+
+  .profile-detail a:hover {
+    color: #249cc5;
+  }
+
+  .profile-icon {
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #555555;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .profile-icon svg {
+    width: 15px;
+    height: 15px;
+    display: block;
+  }
+
+  .profile-icon.orcid {
+    color: #a6ce39;
+  }
+
+  .profile-icon.linkedin {
+    color: #0a66c2;
+  }
+
+  @media (max-width: 760px) {
+    .hero .hero-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-photo {
+      width: 168px;
+      height: 168px;
+    }
+  }
 </style>
 </head>
 
@@ -28,12 +111,15 @@
 
 <header>
   <div class="wrap nav">
-    <a href="index.html" class="brand">Hwijin Baldick | PhD Candidate</a>
+    <a href="index.html" class="brand">
+      Hwijin Baldick | PhD Candidate
+    </a>
+
     <nav class="menu" aria-label="Site navigation">
       <a href="index.html" aria-current="page">Home</a>
-      <a href="research.html">Research</a>
+      <a href="research.html">Publications</a>
       <a href="teaching.html">Teaching</a>
-      <a href="industry-report.html">Industry Report</a>
+      <a href="cv.html">CV</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
@@ -43,76 +129,143 @@
 
 <section class="hero">
   <div class="wrap hero-grid">
+
+    <aside class="hero-profile" aria-label="Profile information">
+      <img
+        class="hero-photo"
+        src="profile-hwijin-baldick.jpg"
+        alt="Portrait of Hwijin Baldick"
+      />
+
+      <h2 class="profile-name">Hwijin Baldick</h2>
+      <p class="profile-role">Ph.D. Candidate at Purdue University</p>
+
+      <div class="profile-details">
+
+        <div class="profile-detail">
+          <span class="profile-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2a7 7 0 0 0-7 7c0 5.15 6.1 11.3 6.36 11.56a.9.9 0 0 0 1.28 0C12.9 20.3 19 14.15 19 9a7 7 0 0 0-7-7Zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/>
+            </svg>
+          </span>
+          <span>West Lafayette, IN</span>
+        </div>
+
+        <div class="profile-detail">
+          <span class="profile-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2 2.5 7v2h19V7L12 2ZM5 10v7H3v2h18v-2h-2v-7h-3v7h-2.5v-7h-3v7H8v-7H5Zm-2.5 10v2h19v-2h-19Z"/>
+            </svg>
+          </span>
+          <span>Purdue University</span>
+        </div>
+
+        <div class="profile-detail">
+          <span class="profile-icon" aria-hidden="true">✉</span>
+          <a href="mailto:jeon46@purdue.edu">Email</a>
+        </div>
+
+        <div class="profile-detail">
+          <span class="profile-icon" aria-hidden="true">G</span>
+          <a
+            href="https://scholar.google.com/citations?user=UAwXOSIAAAAJ&amp;hl=en&amp;oi=ao"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Scholar
+          </a>
+        </div>
+
+        <div class="profile-detail">
+          <span class="profile-icon orcid" aria-hidden="true">●</span>
+          <a
+            href="https://orcid.org/0009-0008-6846-3008"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ORCID
+          </a>
+        </div>
+
+        <div class="profile-detail">
+          <span class="profile-icon linkedin" aria-hidden="true">in</span>
+          <a
+            href="https://www.linkedin.com/in/hwijinbaldick/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+
+      </div>
+    </aside>
+
     <div>
-      <div class="eyebrow">Academic Website</div>
       <h1>Hwijin Baldick</h1>
 
       <p class="subtitle">
-        My research examines how digital platforms and AI-mediated decision making shape consumer behavior and lodging experiences in hospitality and tourism, using experimental and big data approaches.
+        My research focuses on hospitality analytics, AI-mediated decision
+        making, digital platforms, and lodging experiences, using experimental
+        and big data approaches.
       </p>
 
       <div class="hero-meta">
-        White Lodging–J.W. Marriott Jr. School of Hospitality and Tourism Management · Purdue University
-      </div>
-
-      <div class="profile-links">
-        <a class="icon-pill" href="https://orcid.org/0009-0008-6846-3008" target="_blank" rel="noopener noreferrer" aria-label="Visit ORCID profile">
-          <svg width="18" height="18" viewBox="0 0 256 256" aria-hidden="true" fill="none">
-            <circle cx="128" cy="128" r="128" fill="#A6CE39"/>
-            <path d="M86.7 73.4c0 8.6-7 15.6-15.6 15.6s-15.6-7-15.6-15.6 7-15.6 15.6-15.6 15.6 7 15.6 15.6Zm-27 31.2h22.8v92.8H59.7V104.6Zm38.8 0h30.9c29.6 0 48.4 16.9 48.4 46.3 0 29.8-18.9 46.5-48.8 46.5H98.5V104.6Zm22.8 72.4h7.1c18.6 0 25.8-10.3 25.8-26.2 0-16.1-7.7-26.2-25.8-26.2h-7.1V177Z" fill="white"/>
-          </svg>
-          <span>ORCID</span>
-        </a>
-
-        <a class="icon-pill" href="https://scholar.google.com/citations?user=UAwXOSIAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" aria-label="Visit Google Scholar profile">
-          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3 1 9l11 6 9-4.91V17"/>
-            <path d="M5 11.18V16c0 1.9 3.13 4 7 4s7-2.1 7-4v-4.82"/>
-          </svg>
-          <span>Google Scholar</span>
-        </a>
-      </div>
-
-      <div class="actions">
-        <a class="btn primary" href="research.html">View Research</a>
-        <a class="btn secondary" href="industry-report.html">Industry Report</a>
+        White Lodging–J.W. Marriott Jr. School of Hospitality and Tourism
+        Management · Purdue University
       </div>
     </div>
 
-    <div>
-      <img class="hero-photo" src="profile-hwijin-baldick.jpg" alt="Portrait of Hwijin Baldick" />
-    </div>
   </div>
 </section>
 
 <section>
   <div class="wrap two-col">
+
     <div>
       <div class="section-title">About</div>
 
       <p class="lede">
-        I use experimental design, big data analytics, machine learning, and advanced statistical modeling to examine consumer behavior in hospitality and tourism.
+        I use experimental design, big data analytics, machine learning, and
+        advanced statistical modeling to examine consumer behavior in
+        hospitality and tourism.
       </p>
 
       <div class="prose">
         <p>
-          My methodological approach integrates theory-driven inquiry with large-scale data analysis and data-intensive evidence to examine consumer decision making across hospitality environments, lodging experiences, digital platforms, and AI-mediated service contexts.
+          My methodological approach integrates theory-driven inquiry with
+          large-scale data analysis and data-intensive evidence to examine
+          consumer decision making across hospitality environments, lodging
+          experiences, digital platforms, and AI-mediated service contexts.
         </p>
 
         <p>
-          Through this approach, my research aims to advance hospitality theory, offer practical guidance for industry practice, and contribute to societal discussions about how digital platforms and AI systems shape consumer choice, service experiences, and value creation in hospitality and tourism.
+          Through this approach, my research aims to advance hospitality
+          theory, offer practical guidance for industry practice, and
+          contribute to societal discussions about how digital platforms and
+          AI systems shape consumer choice, service experiences, and value
+          creation in hospitality and tourism.
         </p>
       </div>
     </div>
 
     <div>
       <div class="section-title">Research Profile</div>
+
       <div class="stats">
-        <div class="stat"><strong>4</strong>Top-tier journal publications</div>
-        <div class="stat"><strong>4</strong>Core research areas</div>
+        <div class="stat">
+          <strong>4</strong>
+          Top-tier journal publications
+        </div>
+
+        <div class="stat">
+          <strong>4</strong>
+          Core research interests
+        </div>
       </div>
 
       <div class="section-title awards-title">Awards</div>
+
       <div class="stats">
         <div class="stat">
           <strong>2025</strong>
@@ -121,55 +274,70 @@
 
         <div class="stat">
           <strong>2025</strong>
-          <a class="award-link"
-             href="https://www.purdue.edu/hhs/htm-career-center/news-stories/celebrating-excellence-2025-outstanding-graduate-student-awards/"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="Read Purdue news article about the 2025 Outstanding Doctoral Student Teaching Award">
+
+          <a
+            class="award-link"
+            href="https://www.purdue.edu/hhs/htm-career-center/news-stories/celebrating-excellence-2025-outstanding-graduate-student-awards/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Read Purdue news article about the 2025 Outstanding Doctoral Student Teaching Award"
+          >
             Outstanding Doctoral Student Teaching Award ↗
           </a>
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="section-title">Research Areas</div>
+    <div class="section-title">Research Interests</div>
 
     <p class="lede">
-      My work focuses on consumer behavior, digital platforms, AI-mediated decision making, and lodging experiences in hospitality and tourism.
+      My research interests include hospitality analytics, AI-mediated
+      decision making, digital platforms, and lodging experiences.
     </p>
 
     <div class="grid">
-      <article class="card">
-        <h3>Consumer Behavior in Hospitality and Tourism</h3>
-        <p>
-          Examines how consumers perceive, evaluate, and respond to hospitality services, digital information, and experience-based offerings.
-        </p>
-      </article>
 
       <article class="card">
-        <h3>Digital Platforms in Hospitality and Tourism</h3>
+        <h3>Hospitality Analytics</h3>
         <p>
-          Studies how online platforms, review systems, search interfaces, and platform-mediated information environments shape consumer decisions.
+          Applies big data analytics, machine learning, and advanced
+          statistical modeling to examine consumer behavior and industry
+          trends in hospitality and tourism.
         </p>
       </article>
 
       <article class="card">
         <h3>AI-Mediated Decision Making</h3>
         <p>
-          Investigates how AI-generated information, algorithmic recommendations, transparency, and trust influence consumer judgment and behavior.
+          Investigates how AI-generated information, algorithmic
+          recommendations, transparency, and trust influence consumer
+          judgment and behavior.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Digital Platforms</h3>
+        <p>
+          Studies how online platforms, review systems, search interfaces,
+          and platform-mediated information environments shape consumer
+          decisions.
         </p>
       </article>
 
       <article class="card">
         <h3>Lodging Experiences</h3>
         <p>
-          Explores how hotel environments, service design, and experiential cues shape guest perception, memory, satisfaction, and behavioral outcomes.
+          Explores how hotel environments, service design, and experiential
+          cues shape guest perception, memory, satisfaction, and behavioral
+          outcomes.
         </p>
       </article>
+
     </div>
   </div>
 </section>
@@ -179,25 +347,31 @@
     <div class="section-title">Featured Work</div>
 
     <div class="grid">
+
       <article class="card">
-        <h3>Academic Research</h3>
+        <h3>Publications</h3>
         <p>
-          Explore current academic research in hospitality and tourism, including consumer behavior, digital platforms, AI-mediated decision making, and lodging experiences.
+          Explore peer-reviewed journal articles, working papers, and
+          practitioner-facing publications in hospitality and tourism.
         </p>
+
         <div class="meta">
-          <a href="research.html">Open research page →</a>
+          <a href="research.html">Open publications page →</a>
         </div>
       </article>
 
       <article class="card">
-        <h3>Boutique Hotel Industry Report</h3>
+        <h3>Curriculum Vitae</h3>
         <p>
-          Read the Chicago boutique hotel report directly on this website, with the full PDF embedded on a dedicated page.
+          View publications, manuscripts, working papers, industry
+          publications, and conference presentations.
         </p>
+
         <div class="meta">
-          <a href="industry-report.html">Open industry report →</a>
+          <a href="cv.html">Open CV →</a>
         </div>
       </article>
+
     </div>
   </div>
 </section>
@@ -205,7 +379,9 @@
 </main>
 
 <footer>
-  <div class="wrap">© 2026 Hwijin Baldick. All rights reserved.</div>
+  <div class="wrap">
+    © 2026 Hwijin Baldick. All rights reserved.
+  </div>
 </footer>
 
 </body>

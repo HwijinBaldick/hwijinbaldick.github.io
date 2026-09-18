@@ -1,37 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Hwijin Baldick | PhD Candidate</title>
+
+<title>Hwijin Baldick | Ph.D. Candidate</title>
+
 <link rel="stylesheet" href="styles.css" />
 
 <style>
-  /* Home page */
-
-  .home-hero {
-    padding: 96px 0 88px;
+  .home-page {
+    padding: 42px 0 72px;
+    border-bottom: 0;
   }
 
-  .home-hero-grid {
+  .home-layout {
     display: grid;
     grid-template-columns: 220px minmax(0, 1fr);
-    gap: 64px;
+    gap: 54px;
     align-items: start;
   }
 
-  .hero-profile .hero-photo {
+  /* ------------------------------
+     Left Profile Sidebar
+  ------------------------------ */
+
+  .profile-sidebar {
+    position: sticky;
+    top: 104px;
+  }
+
+  .profile-sidebar img {
+    width: 174px;
+    height: 174px;
+    object-fit: cover;
+    object-position: center 24%;
+    border-radius: 50%;
+    border: 5px solid #f2f2f2;
     margin-bottom: 18px;
   }
 
-  .profile-name {
-    margin: 0 0 3px;
+  .profile-sidebar h1 {
+    margin: 0 0 4px;
     font-size: 1.2rem;
     font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.4;
   }
 
   .profile-role {
-    margin: 0 0 22px;
+    margin: 0 0 20px;
     color: #555555;
     font-size: 1rem;
     line-height: 1.6;
@@ -39,24 +58,25 @@
 
   .profile-details {
     display: grid;
-    gap: 10px;
+    gap: 9px;
     color: #4f4f4f;
-    font-size: 0.96rem;
+    font-size: 0.98rem;
   }
 
   .profile-detail {
     display: grid;
     grid-template-columns: 18px minmax(0, 1fr);
-    gap: 9px;
+    gap: 8px;
     align-items: center;
   }
 
   .profile-detail a {
-    transition: opacity 0.2s ease;
+    color: inherit;
+    text-decoration: none;
   }
 
   .profile-detail a:hover {
-    opacity: 0.65;
+    color: #249cc5;
   }
 
   .profile-icon {
@@ -66,7 +86,7 @@
     align-items: center;
     justify-content: center;
     color: #555555;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
   }
 
@@ -84,122 +104,153 @@
     color: #0a66c2;
   }
 
-  .hero-about {
-    max-width: 760px;
-    padding-top: 14px;
+  /* ------------------------------
+     Right Home Content
+  ------------------------------ */
+
+  .home-content {
+    min-width: 0;
+    padding-top: 8px;
   }
 
-  .hero-about .section-title {
-    margin-bottom: 18px;
-  }
-
-  .hero-statement {
-    margin: 0 0 24px;
-    max-width: 720px;
-    font-size: clamp(25px, 3vw, 36px);
-    line-height: 1.35;
-    letter-spacing: -0.025em;
-    font-weight: 500;
-  }
-
-  .hero-description {
-    max-width: 700px;
-    margin: 0;
-    font-size: 17px;
-    line-height: 1.85;
-    color: #444444;
-  }
-
-  .hero-affiliation {
-    margin-top: 26px;
+  .about-label {
+    margin: 0 0 18px;
     color: #666666;
-    font-size: 14px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
   }
 
-  .research-interest-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-    margin-top: 28px;
-  }
-
-  .interest-card {
-    border: 1px solid var(--line);
-    border-radius: 20px;
-    padding: 24px;
-    background: #ffffff;
-  }
-
-  .interest-card h3 {
+  .about-text {
+    max-width: 760px;
     margin: 0;
-    font-size: 20px;
-    line-height: 1.35;
-    letter-spacing: -0.015em;
+    color: #222222;
+    font-size: 22px;
+    line-height: 1.65;
+    font-weight: 400;
+    letter-spacing: -0.01em;
   }
 
-  .featured-grid {
+  /* ------------------------------
+     Research Interests
+  ------------------------------ */
+
+  .home-section {
+    margin-top: 58px;
+    padding: 0;
+    border-bottom: 0;
+  }
+
+  .home-section-title {
+    margin: 0 0 20px;
+    color: #1f1f1f;
+    font-size: 1.25rem;
+    font-weight: 650;
+  }
+
+  .interest-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-    margin-top: 28px;
+    gap: 0 40px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-width: 800px;
   }
 
-  .featured-card {
-    border: 1px solid var(--line);
-    border-radius: 20px;
-    padding: 28px;
-    background: #ffffff;
+  .interest-list li {
+    padding: 14px 0;
+    border-bottom: 1px solid #e8e8e8;
+    color: #333333;
+    font-size: 1rem;
+    line-height: 1.5;
   }
 
-  .featured-card h3 {
-    margin: 0 0 10px;
-    font-size: 22px;
-    line-height: 1.3;
+  /* ------------------------------
+     Featured Work
+  ------------------------------ */
+
+  .featured-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 800px;
   }
 
-  .featured-card p {
-    margin: 0 0 16px;
-    color: #444444;
-    line-height: 1.7;
+  .featured-item {
+    padding: 18px 0;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .featured-item:first-child {
+    border-top: 1px solid #e8e8e8;
+  }
+
+  .featured-item h3 {
+    margin: 0 0 5px;
+    font-size: 1.05rem;
+    font-weight: 650;
+  }
+
+  .featured-item p {
+    margin: 0 0 7px;
+    color: #555555;
+    line-height: 1.6;
   }
 
   .featured-link {
-    color: #666666;
-    font-size: 14px;
+    color: #249cc5;
+    font-size: 0.94rem;
+    text-decoration: none;
   }
 
   .featured-link:hover {
-    color: #111111;
+    text-decoration: underline;
   }
 
-  @media (max-width: 800px) {
-    .home-hero-grid {
+  /* ------------------------------
+     Responsive
+  ------------------------------ */
+
+  @media (max-width: 760px) {
+    .home-layout {
       grid-template-columns: 1fr;
-      gap: 40px;
+      gap: 36px;
     }
 
-    .hero-photo {
-      width: 168px;
-      height: 168px;
+    .profile-sidebar {
+      position: static;
     }
 
-    .research-interest-grid,
-    .featured-grid {
-      grid-template-columns: 1fr;
+    .profile-sidebar img {
+      width: 132px;
+      height: 132px;
     }
 
-    .hero-about {
+    .home-content {
       padding-top: 0;
+    }
+
+    .about-text {
+      font-size: 19px;
+    }
+
+    .interest-list {
+      grid-template-columns: 1fr;
     }
   }
 </style>
+
 </head>
 
 <body>
 
 <header>
   <div class="wrap nav">
-    <a href="index.html" class="brand">Hwijin Baldick | PhD Candidate</a>
+
+    <a href="index.html" class="brand">
+      Hwijin Baldick | Ph.D. Candidate
+    </a>
 
     <nav class="menu" aria-label="Site navigation">
       <a href="index.html" aria-current="page">Home</a>
@@ -207,176 +258,206 @@
       <a href="teaching.html">Teaching</a>
       <a href="contact.html">Contact</a>
     </nav>
+
   </div>
 </header>
 
+
 <main>
 
-  <!-- Profile + About -->
-  <section class="home-hero">
-    <div class="wrap home-hero-grid">
+<section class="home-page">
 
-      <aside class="hero-profile" aria-label="Profile information">
+  <div class="wrap home-layout">
 
-        <img
-          class="hero-photo"
-          src="profile-hwijin-baldick.jpg"
-          alt="Portrait of Hwijin Baldick"
-        />
+    <!-- Left Profile Sidebar -->
 
-        <h1 class="profile-name">Hwijin Baldick</h1>
+    <aside class="profile-sidebar" aria-label="Profile information">
 
-        <p class="profile-role">
-          Ph.D. Candidate at Purdue University
-        </p>
+      <img
+        src="profile-hwijin-baldick.jpg"
+        alt="Portrait of Hwijin Baldick"
+      />
 
-        <div class="profile-details">
+      <h1>Hwijin Baldick</h1>
 
-          <div class="profile-detail">
-            <span class="profile-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2a7 7 0 0 0-7 7c0 5.15 6.1 11.3 6.36 11.56a.9.9 0 0 0 1.28 0C12.9 20.3 19 14.15 19 9a7 7 0 0 0-7-7Zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/>
-              </svg>
-            </span>
-            <span>West Lafayette, IN</span>
-          </div>
+      <p class="profile-role">
+        Ph.D. Candidate at Purdue University
+      </p>
 
-          <div class="profile-detail">
-            <span class="profile-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2 2.5 7v2h19V7L12 2ZM5 10v7H3v2h18v-2h-2v-7h-3v7h-2.5v-7h-3v7H8v-7H5Zm-2.5 10v2h19v-2h-19Z"/>
-              </svg>
-            </span>
-            <span>Purdue University</span>
-          </div>
+      <div class="profile-details">
 
-          <div class="profile-detail">
-            <span class="profile-icon" aria-hidden="true">✉</span>
-            <a href="mailto:jeon46@purdue.edu">Email</a>
-          </div>
-
-          <div class="profile-detail">
-            <span class="profile-icon" aria-hidden="true">G</span>
-            <a
-              href="https://scholar.google.com/citations?user=UAwXOSIAAAAJ&hl=en&oi=ao"
-              target="_blank"
-              rel="noopener noreferrer">
-              Google Scholar
-            </a>
-          </div>
-
-          <div class="profile-detail">
-            <span class="profile-icon orcid" aria-hidden="true">●</span>
-            <a
-              href="https://orcid.org/0009-0008-6846-3008"
-              target="_blank"
-              rel="noopener noreferrer">
-              ORCID
-            </a>
-          </div>
-
-          <div class="profile-detail">
-            <span class="profile-icon linkedin" aria-hidden="true">in</span>
-            <a
-              href="https://www.linkedin.com/in/hwijinbaldick/"
-              target="_blank"
-              rel="noopener noreferrer">
-              LinkedIn
-            </a>
-          </div>
-
+        <div class="profile-detail">
+          <span class="profile-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2a7 7 0 0 0-7 7c0 5.15 6.1 11.3 6.36 11.56a.9.9 0 0 0 1.28 0C12.9 20.3 19 14.15 19 9a7 7 0 0 0-7-7Zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/>
+            </svg>
+          </span>
+          <span>West Lafayette, IN</span>
         </div>
-      </aside>
 
-      <div class="hero-about">
+        <div class="profile-detail">
+          <span class="profile-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2 2.5 7v2h19V7L12 2ZM5 10v7H3v2h18v-2h-2v-7h-3v7h-2.5v-7h-3v7H8v-7H5Zm-2.5 10v2h19v-2h-19Z"/>
+            </svg>
+          </span>
+          <span>Purdue University</span>
+        </div>
 
-        <div class="section-title">About</div>
+        <div class="profile-detail">
+          <span class="profile-icon" aria-hidden="true">✉</span>
+          <a href="mailto:jeon46@purdue.edu">Email</a>
+        </div>
 
-        <p class="hero-statement">
-          I use experimental design, big data analytics, machine learning, and advanced statistical modeling to examine consumer behavior in hospitality and tourism.
-        </p>
+        <div class="profile-detail">
+          <span class="profile-icon" aria-hidden="true">G</span>
+          <a
+            href="https://scholar.google.com/citations?user=UAwXOSIAAAAJ&hl=en&oi=ao"
+            target="_blank"
+            rel="noopener noreferrer">
+            Google Scholar
+          </a>
+        </div>
 
-        <p class="hero-description">
-          My research integrates theory-driven inquiry with data-intensive approaches to study consumer decision making across hospitality environments, digital platforms, lodging experiences, and AI-mediated service contexts.
-        </p>
+        <div class="profile-detail">
+          <span class="profile-icon orcid" aria-hidden="true">●</span>
+          <a
+            href="https://orcid.org/0009-0008-6846-3008"
+            target="_blank"
+            rel="noopener noreferrer">
+            ORCID
+          </a>
+        </div>
 
-        <div class="hero-affiliation">
-          White Lodging–J.W. Marriott Jr. School of Hospitality and Tourism Management · Purdue University
+        <div class="profile-detail">
+          <span class="profile-icon linkedin" aria-hidden="true">in</span>
+          <a
+            href="https://www.linkedin.com/in/hwijinbaldick/"
+            target="_blank"
+            rel="noopener noreferrer">
+            LinkedIn
+          </a>
         </div>
 
       </div>
-    </div>
-  </section>
+
+    </aside>
 
 
-  <!-- Research Interests -->
-  <section>
-    <div class="wrap">
+    <!-- Right Content -->
 
-      <div class="section-title">Research Interests</div>
+    <div class="home-content">
 
-      <div class="research-interest-grid">
+      <!-- About -->
 
-        <article class="interest-card">
-          <h3>Hospitality Analytics &amp; Big Data</h3>
-        </article>
-
-        <article class="interest-card">
-          <h3>AI-Mediated Consumer Decision Making</h3>
-        </article>
-
-        <article class="interest-card">
-          <h3>Technology-Enabled Service Innovation &amp; Digital Platforms</h3>
-        </article>
-
-        <article class="interest-card">
-          <h3>Lodging Experiences</h3>
-        </article>
-
+      <div class="about-label">
+        About
       </div>
+
+      <p class="about-text">
+        I ask how data and artificial intelligence are reshaping decision making and competition in hospitality and tourism. Drawing on my experience in hotel management and operations, I combine large-scale behavioral data with rigorous, theory-driven empirical methods to uncover patterns that matter for both scholarship and practice.
+      </p>
+
+
+      <!-- Research Interests -->
+
+      <section class="home-section">
+
+        <h2 class="home-section-title">
+          Research Interests
+        </h2>
+
+        <ul class="interest-list">
+
+          <li>
+            Hospitality Analytics &amp; Big Data
+          </li>
+
+          <li>
+            AI-Mediated Consumer Decision Making
+          </li>
+
+          <li>
+            Technology-Enabled Service Innovation &amp; Digital Platforms
+          </li>
+
+          <li>
+            Lodging Experiences
+          </li>
+
+        </ul>
+
+      </section>
+
+
+      <!-- Featured Work -->
+
+      <section class="home-section">
+
+        <h2 class="home-section-title">
+          Featured Work
+        </h2>
+
+        <ul class="featured-list">
+
+          <li class="featured-item">
+
+            <h3>
+              Academic Publications
+            </h3>
+
+            <p>
+              Peer-reviewed journal articles, manuscripts under review, working papers, and conference proceedings.
+            </p>
+
+            <a
+              class="featured-link"
+              href="publication.html">
+              View academic publications →
+            </a>
+
+          </li>
+
+
+          <li class="featured-item">
+
+            <h3>
+              Industry-Facing Research
+            </h3>
+
+            <p>
+              Practitioner-facing CHRIBA Briefs and Insights translating research into industry applications.
+            </p>
+
+            <a
+              class="featured-link"
+              href="publication.html#industry-publications">
+              View industry-facing research →
+            </a>
+
+          </li>
+
+        </ul>
+
+      </section>
+
     </div>
-  </section>
 
+  </div>
 
-  <!-- Featured Work -->
-  <section>
-    <div class="wrap">
-
-      <div class="section-title">Featured Work</div>
-
-      <div class="featured-grid">
-
-        <article class="featured-card">
-          <h3>Academic Publications</h3>
-          <p>
-            Peer-reviewed journal articles, manuscripts under review, and current research projects.
-          </p>
-          <a class="featured-link" href="publication.html">
-            View academic publications →
-          </a>
-        </article>
-
-        <article class="featured-card">
-          <h3>Industry Publications</h3>
-          <p>
-            Practitioner-facing CHRIBA Briefs and Insights translating research into industry applications.
-          </p>
-          <a class="featured-link" href="publication.html#industry-publications">
-            View industry publications →
-          </a>
-        </article>
-
-      </div>
-    </div>
-  </section>
+</section>
 
 </main>
 
+
 <footer>
+
   <div class="wrap">
     © 2026 Hwijin Baldick. All rights reserved.
   </div>
+
 </footer>
 
 </body>
+
 </html>

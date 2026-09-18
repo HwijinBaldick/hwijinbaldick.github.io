@@ -12,10 +12,11 @@
 <style>
   .teaching-page {
     padding: 42px 0 72px;
+    border-bottom: 0;
   }
 
   .teaching-heading {
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
 
   .teaching-heading h1 {
@@ -30,8 +31,11 @@
     font-size: 1.05rem;
   }
 
+  /* Prevent global section spacing from creating large blank areas */
   .teaching-section {
-    margin-top: 52px;
+    margin-top: 48px;
+    padding: 0;
+    border-bottom: 0;
   }
 
   .teaching-section:first-of-type {
@@ -40,16 +44,16 @@
 
   .teaching-section-title {
     margin: 0 0 18px;
+    color: #1f1f1f;
     font-size: 1.25rem;
     font-weight: 650;
     line-height: 1.4;
-    color: #1f1f1f;
   }
 
   .teaching-intro {
     margin: 0 0 24px;
     color: #333333;
-    line-height: 1.75;
+    line-height: 1.7;
   }
 
   .school-name {
@@ -58,6 +62,8 @@
     color: #555555;
   }
 
+  /* Teaching Experience Table */
+
   .table-wrap {
     width: 100%;
     overflow-x: auto;
@@ -65,25 +71,25 @@
 
   .teaching-table {
     width: 100%;
-    border-collapse: collapse;
     min-width: 820px;
+    border-collapse: collapse;
     font-size: 0.96rem;
   }
 
   .teaching-table th {
     padding: 14px 16px;
     text-align: left;
+    color: #222222;
     font-weight: 650;
     border-bottom: 2px solid #333333;
-    color: #222222;
   }
 
   .teaching-table td {
     padding: 15px 16px;
     vertical-align: top;
-    border-bottom: 1px solid #e5e5e5;
     color: #333333;
     line-height: 1.55;
+    border-bottom: 1px solid #e5e5e5;
   }
 
   .teaching-table th:first-child,
@@ -101,11 +107,13 @@
     width: 145px;
   }
 
+  /* Teaching Awards & Certificates */
+
   .credential-list {
     list-style: none;
     margin: 0;
     padding: 0;
-    max-width: 900px;
+    max-width: 920px;
   }
 
   .credential-item {
@@ -121,14 +129,15 @@
   }
 
   .credential-year {
-    font-weight: 700;
     color: #222222;
+    font-weight: 700;
   }
 
   .credential-title {
     margin: 0;
-    font-weight: 650;
     color: #222222;
+    font-weight: 650;
+    line-height: 1.55;
   }
 
   .credential-meta {
@@ -139,24 +148,15 @@
   }
 
   .credential-link {
-    color: #249cc5;
+    color: inherit;
     text-decoration: none;
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid #999999;
+    transition: color 0.2s ease, border-color 0.2s ease;
   }
 
   .credential-link:hover {
-    border-bottom-color: currentColor;
-  }
-
-  .teaching-philosophy {
-    max-width: 820px;
-    color: #333333;
-    font-size: 1rem;
-    line-height: 1.8;
-  }
-
-  .teaching-philosophy p {
-    margin: 0 0 16px;
+    color: #249cc5;
+    border-bottom-color: #249cc5;
   }
 
   @media (max-width: 760px) {
@@ -196,13 +196,19 @@
 <main>
 
 <section class="teaching-page">
+
   <div class="wrap">
 
+    <!-- Page Heading -->
+
     <div class="teaching-heading">
+
       <h1>Teaching</h1>
+
       <p>
-        Teaching experience, recognition, and professional development in hospitality and tourism management.
+        Teaching experience, awards, and professional development in hospitality and tourism management.
       </p>
+
     </div>
 
 
@@ -216,6 +222,7 @@
 
       <p class="teaching-intro">
         <strong>Purdue University, West Lafayette, Indiana</strong>
+
         <span class="school-name">
           White Lodging–J.W. Marriott, Jr. School of Hospitality and Tourism Management
         </span>
@@ -340,24 +347,44 @@
       <ul class="credential-list">
 
         <li class="credential-item">
-          <div class="credential-year">2025</div>
+
+          <div class="credential-year">
+            2025
+          </div>
 
           <div>
+
             <p class="credential-title">
-              Teaching Academy Graduate Teaching Award
+
+              <a
+                class="credential-link"
+                href="University%20teaching%20award_HwijinBaldick.pdf"
+                target="_blank"
+                rel="noopener noreferrer">
+                Teaching Academy Graduate Teaching Award ↗
+              </a>
+
             </p>
 
             <p class="credential-meta">
               Purdue University · White Lodging–J.W. Marriott, Jr. School of Hospitality and Tourism Management
             </p>
+
           </div>
+
         </li>
 
+
         <li class="credential-item">
-          <div class="credential-year">2025</div>
+
+          <div class="credential-year">
+            2025
+          </div>
 
           <div>
+
             <p class="credential-title">
+
               <a
                 class="credential-link"
                 href="https://www.purdue.edu/hhs/htm-career-center/news-stories/celebrating-excellence-2025-outstanding-graduate-student-awards/"
@@ -365,12 +392,15 @@
                 rel="noopener noreferrer">
                 Outstanding Doctoral Student Teaching Award ↗
               </a>
+
             </p>
 
             <p class="credential-meta">
               Purdue University · White Lodging–J.W. Marriott, Jr. School of Hospitality and Tourism Management
             </p>
+
           </div>
+
         </li>
 
       </ul>
@@ -389,10 +419,15 @@
       <ul class="credential-list">
 
         <li class="credential-item">
-          <div class="credential-year">2024</div>
+
+          <div class="credential-year">
+            2024
+          </div>
 
           <div>
+
             <p class="credential-title">
+
               <a
                 class="credential-link"
                 href="CEI_certificate.pdf"
@@ -400,71 +435,63 @@
                 rel="noopener noreferrer">
                 Certificate of Foundations in College Teaching ↗
               </a>
+
             </p>
 
             <p class="credential-meta">
               Purdue University Teaching Academy · Center for Instructional Excellence · October 2024
             </p>
+
           </div>
+
         </li>
 
+
         <li class="credential-item">
-          <div class="credential-year">2024</div>
+
+          <div class="credential-year">
+            2024
+          </div>
 
           <div>
+
             <p class="credential-title">
+
               <a
                 class="credential-link"
-                href="College_teaching certificate.pdf"
+                href="College_teaching%20certificate.pdf"
                 target="_blank"
                 rel="noopener noreferrer">
                 Practice of College Teaching Certificate ↗
               </a>
+
             </p>
 
             <p class="credential-meta">
               Purdue University College Teaching Development Program · Spring 2024
             </p>
+
           </div>
+
         </li>
 
       </ul>
 
     </section>
 
-
-    <!-- Teaching Philosophy -->
-
-    <section class="teaching-section">
-
-      <h2 class="teaching-section-title">
-        Teaching Philosophy
-      </h2>
-
-      <div class="teaching-philosophy">
-
-        <p>
-          My teaching emphasizes conceptual clarity, analytical reasoning, and student engagement in hospitality and tourism management. I use active and applied learning approaches to help students connect course concepts with managerial decision making.
-        </p>
-
-        <p>
-          Across accounting and operations courses, I incorporate real-world examples, data, Excel-based analytical exercises, and instructional technologies to strengthen students’ quantitative reasoning and practical problem-solving skills.
-        </p>
-
-      </div>
-
-    </section>
-
   </div>
+
 </section>
 
 </main>
 
 
 <footer>
+
   <div class="wrap">
     © 2026 Hwijin Baldick. All rights reserved.
   </div>
+
 </footer>
 
 </body>

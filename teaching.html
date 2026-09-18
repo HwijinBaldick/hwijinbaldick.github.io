@@ -17,12 +17,14 @@
 
   .academic-layout {
     display: grid;
-    grid-template-columns: 220px minmax(0, 1fr);
-    gap: 54px;
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 44px;
     align-items: start;
   }
 
-  /* Left Profile Sidebar */
+  /* ------------------------------
+     Left Profile Sidebar
+  ------------------------------ */
 
   .profile-sidebar {
     position: sticky;
@@ -94,7 +96,13 @@
     color: #0a66c2;
   }
 
-  /* Right Teaching Content */
+  /* ------------------------------
+     Right Teaching Content
+  ------------------------------ */
+
+  .teaching-content {
+    min-width: 0;
+  }
 
   .teaching-content h1 {
     margin: 0;
@@ -138,22 +146,25 @@
     color: #555555;
   }
 
-  /* Teaching Experience Table */
+  /* ------------------------------
+     Teaching Experience Table
+  ------------------------------ */
 
   .table-wrap {
     width: 100%;
-    overflow-x: auto;
+    overflow: visible;
   }
 
   .teaching-table {
     width: 100%;
-    min-width: 820px;
+    min-width: 0;
     border-collapse: collapse;
-    font-size: 0.96rem;
+    table-layout: fixed;
+    font-size: 0.94rem;
   }
 
   .teaching-table th {
-    padding: 14px 16px;
+    padding: 13px 10px;
     text-align: left;
     color: #222222;
     font-weight: 650;
@@ -161,35 +172,45 @@
   }
 
   .teaching-table td {
-    padding: 15px 16px;
+    padding: 14px 10px;
     vertical-align: top;
     color: #333333;
-    line-height: 1.55;
+    line-height: 1.5;
     border-bottom: 1px solid #e5e5e5;
   }
 
-  .teaching-table th:first-child,
-  .teaching-table td:first-child {
-    width: 145px;
+  /* Column widths */
+
+  .teaching-table th:nth-child(1),
+  .teaching-table td:nth-child(1) {
+    width: 17%;
   }
 
   .teaching-table th:nth-child(2),
   .teaching-table td:nth-child(2) {
-    width: 180px;
+    width: 20%;
   }
 
-  .teaching-table th:last-child,
-  .teaching-table td:last-child {
-    width: 145px;
+  .teaching-table th:nth-child(3),
+  .teaching-table td:nth-child(3) {
+    width: 45%;
   }
 
-  /* Awards & Certificates */
+  .teaching-table th:nth-child(4),
+  .teaching-table td:nth-child(4) {
+    width: 18%;
+    white-space: nowrap;
+  }
+
+  /* ------------------------------
+     Awards & Certificates
+  ------------------------------ */
 
   .credential-list {
     list-style: none;
     margin: 0;
     padding: 0;
-    max-width: 920px;
+    width: 100%;
   }
 
   .credential-item {
@@ -235,6 +256,32 @@
     border-bottom-color: #249cc5;
   }
 
+  /* ------------------------------
+     Responsive
+  ------------------------------ */
+
+  @media (max-width: 900px) {
+    .academic-layout {
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 32px;
+    }
+
+    .profile-sidebar img {
+      width: 150px;
+      height: 150px;
+    }
+
+    .teaching-table {
+      font-size: 0.9rem;
+    }
+
+    .teaching-table th,
+    .teaching-table td {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+
   @media (max-width: 760px) {
     .academic-layout {
       grid-template-columns: 1fr;
@@ -248,6 +295,15 @@
     .profile-sidebar img {
       width: 132px;
       height: 132px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    .teaching-table {
+      min-width: 720px;
+      table-layout: auto;
     }
 
     .credential-item {
@@ -278,7 +334,6 @@
   </div>
 </header>
 
-
 <main>
 
 <section class="teaching-page">
@@ -308,8 +363,10 @@
               <path d="M12 2a7 7 0 0 0-7 7c0 5.15 6.1 11.3 6.36 11.56a.9.9 0 0 0 1.28 0C12.9 20.3 19 14.15 19 9a7 7 0 0 0-7-7Zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/>
             </svg>
           </span>
+
           <span>West Lafayette, IN</span>
         </div>
+
 
         <div class="profile-detail">
           <span class="profile-icon" aria-hidden="true">
@@ -317,16 +374,20 @@
               <path d="M12 2 2.5 7v2h19V7L12 2ZM5 10v7H3v2h18v-2h-2v-7h-3v7h-2.5v-7h-3v7H8v-7H5Zm-2.5 10v2h19v-2h-19Z"/>
             </svg>
           </span>
+
           <span>Purdue University</span>
         </div>
+
 
         <div class="profile-detail">
           <span class="profile-icon" aria-hidden="true">✉</span>
           <a href="mailto:jeon46@purdue.edu">Email</a>
         </div>
 
+
         <div class="profile-detail">
           <span class="profile-icon" aria-hidden="true">G</span>
+
           <a
             href="https://scholar.google.com/citations?user=UAwXOSIAAAAJ&hl=en&oi=ao"
             target="_blank"
@@ -335,8 +396,10 @@
           </a>
         </div>
 
+
         <div class="profile-detail">
           <span class="profile-icon orcid" aria-hidden="true">●</span>
+
           <a
             href="https://orcid.org/0009-0008-6846-3008"
             target="_blank"
@@ -345,8 +408,10 @@
           </a>
         </div>
 
+
         <div class="profile-detail">
           <span class="profile-icon linkedin" aria-hidden="true">in</span>
+
           <a
             href="https://www.linkedin.com/in/hwijinbaldick/"
             target="_blank"
@@ -380,25 +445,33 @@
         </h2>
 
         <p class="teaching-intro">
-          <strong>Purdue University, West Lafayette, Indiana</strong>
+
+          <strong>
+            Purdue University, West Lafayette, Indiana
+          </strong>
 
           <span class="school-name">
             White Lodging–J.W. Marriott, Jr. School of Hospitality and Tourism Management
           </span>
+
         </p>
+
 
         <div class="table-wrap">
 
           <table class="teaching-table">
 
             <thead>
+
               <tr>
                 <th>Term</th>
                 <th>Role</th>
                 <th>Course</th>
                 <th>Course Type</th>
               </tr>
+
             </thead>
+
 
             <tbody>
 
@@ -514,6 +587,7 @@
             <div>
 
               <p class="credential-title">
+
                 <a
                   class="credential-link"
                   href="University%20teaching%20award_HwijinBaldick.pdf"
@@ -521,6 +595,7 @@
                   rel="noopener noreferrer">
                   Teaching Academy Graduate Teaching Award ↗
                 </a>
+
               </p>
 
               <p class="credential-meta">
@@ -541,6 +616,7 @@
             <div>
 
               <p class="credential-title">
+
                 <a
                   class="credential-link"
                   href="https://www.purdue.edu/hhs/htm-career-center/news-stories/celebrating-excellence-2025-outstanding-graduate-student-awards/"
@@ -548,6 +624,7 @@
                   rel="noopener noreferrer">
                   Outstanding Doctoral Student Teaching Award ↗
                 </a>
+
               </p>
 
               <p class="credential-meta">
@@ -582,6 +659,7 @@
             <div>
 
               <p class="credential-title">
+
                 <a
                   class="credential-link"
                   href="CEI_certificate.pdf"
@@ -589,6 +667,7 @@
                   rel="noopener noreferrer">
                   Certificate of Foundations in College Teaching ↗
                 </a>
+
               </p>
 
               <p class="credential-meta">
@@ -609,6 +688,7 @@
             <div>
 
               <p class="credential-title">
+
                 <a
                   class="credential-link"
                   href="College_teaching%20certificate.pdf"
@@ -616,6 +696,7 @@
                   rel="noopener noreferrer">
                   Practice of College Teaching Certificate ↗
                 </a>
+
               </p>
 
               <p class="credential-meta">
@@ -640,9 +721,11 @@
 
 
 <footer>
+
   <div class="wrap">
     © 2026 Hwijin Baldick. All rights reserved.
   </div>
+
 </footer>
 
 </body>

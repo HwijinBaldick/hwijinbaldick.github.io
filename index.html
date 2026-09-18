@@ -7,24 +7,22 @@
 <link rel="stylesheet" href="styles.css" />
 
 <style>
-  .awards-title { margin-top: 32px; }
+  /* Home page */
 
-  .award-link {
-    color: inherit;
-    text-decoration: none;
-    border-bottom: 1px solid #111111;
-    transition: opacity 0.2s ease;
+  .home-hero {
+    padding: 96px 0 88px;
   }
 
-  .award-link:hover { opacity: 0.75; }
-
-  .hero .hero-grid {
+  .home-hero-grid {
+    display: grid;
     grid-template-columns: 220px minmax(0, 1fr);
+    gap: 64px;
     align-items: start;
   }
 
-  .hero-profile { padding-top: 2px; }
-  .hero-profile .hero-photo { margin-bottom: 18px; }
+  .hero-profile .hero-photo {
+    margin-bottom: 18px;
+  }
 
   .profile-name {
     margin: 0 0 3px;
@@ -33,26 +31,33 @@
   }
 
   .profile-role {
-    margin: 0 0 20px;
+    margin: 0 0 22px;
     color: #555555;
     font-size: 1rem;
+    line-height: 1.6;
   }
 
   .profile-details {
     display: grid;
-    gap: 9px;
+    gap: 10px;
     color: #4f4f4f;
-    font-size: 0.98rem;
+    font-size: 0.96rem;
   }
 
   .profile-detail {
     display: grid;
     grid-template-columns: 18px minmax(0, 1fr);
-    gap: 8px;
+    gap: 9px;
     align-items: center;
   }
 
-  .profile-detail a:hover { color: #249cc5; }
+  .profile-detail a {
+    transition: opacity 0.2s ease;
+  }
+
+  .profile-detail a:hover {
+    opacity: 0.65;
+  }
 
   .profile-icon {
     width: 18px;
@@ -61,7 +66,7 @@
     align-items: center;
     justify-content: center;
     color: #555555;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
   }
 
@@ -71,12 +76,121 @@
     display: block;
   }
 
-  .profile-icon.orcid { color: #a6ce39; }
-  .profile-icon.linkedin { color: #0a66c2; }
+  .profile-icon.orcid {
+    color: #a6ce39;
+  }
 
-  @media (max-width: 760px) {
-    .hero .hero-grid { grid-template-columns: 1fr; }
-    .hero-photo { width: 168px; height: 168px; }
+  .profile-icon.linkedin {
+    color: #0a66c2;
+  }
+
+  .hero-about {
+    max-width: 760px;
+    padding-top: 14px;
+  }
+
+  .hero-about .section-title {
+    margin-bottom: 18px;
+  }
+
+  .hero-statement {
+    margin: 0 0 24px;
+    max-width: 720px;
+    font-size: clamp(25px, 3vw, 36px);
+    line-height: 1.35;
+    letter-spacing: -0.025em;
+    font-weight: 500;
+  }
+
+  .hero-description {
+    max-width: 700px;
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.85;
+    color: #444444;
+  }
+
+  .hero-affiliation {
+    margin-top: 26px;
+    color: #666666;
+    font-size: 14px;
+  }
+
+  .research-interest-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 28px;
+  }
+
+  .interest-card {
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 24px;
+    background: #ffffff;
+  }
+
+  .interest-card h3 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.35;
+    letter-spacing: -0.015em;
+  }
+
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 28px;
+  }
+
+  .featured-card {
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 28px;
+    background: #ffffff;
+  }
+
+  .featured-card h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .featured-card p {
+    margin: 0 0 16px;
+    color: #444444;
+    line-height: 1.7;
+  }
+
+  .featured-link {
+    color: #666666;
+    font-size: 14px;
+  }
+
+  .featured-link:hover {
+    color: #111111;
+  }
+
+  @media (max-width: 800px) {
+    .home-hero-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .hero-photo {
+      width: 168px;
+      height: 168px;
+    }
+
+    .research-interest-grid,
+    .featured-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-about {
+      padding-top: 0;
+    }
   }
 </style>
 </head>
@@ -86,6 +200,7 @@
 <header>
   <div class="wrap nav">
     <a href="index.html" class="brand">Hwijin Baldick | PhD Candidate</a>
+
     <nav class="menu" aria-label="Site navigation">
       <a href="index.html" aria-current="page">Home</a>
       <a href="publication.html">Publications</a>
@@ -96,24 +211,41 @@
 </header>
 
 <main>
-  <section class="hero">
-    <div class="wrap hero-grid">
+
+  <!-- Profile + About -->
+  <section class="home-hero">
+    <div class="wrap home-hero-grid">
+
       <aside class="hero-profile" aria-label="Profile information">
-        <img class="hero-photo" src="profile-hwijin-baldick.jpg" alt="Portrait of Hwijin Baldick" />
-        <h2 class="profile-name">Hwijin Baldick</h2>
-        <p class="profile-role">Ph.D. Candidate at Purdue University</p>
+
+        <img
+          class="hero-photo"
+          src="profile-hwijin-baldick.jpg"
+          alt="Portrait of Hwijin Baldick"
+        />
+
+        <h1 class="profile-name">Hwijin Baldick</h1>
+
+        <p class="profile-role">
+          Ph.D. Candidate at Purdue University
+        </p>
 
         <div class="profile-details">
+
           <div class="profile-detail">
             <span class="profile-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.15 6.1 11.3 6.36 11.56a.9.9 0 0 0 1.28 0C12.9 20.3 19 14.15 19 9a7 7 0 0 0-7-7Zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" /></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2a7 7 0 0 0-7 7c0 5.15 6.1 11.3 6.36 11.56a.9.9 0 0 0 1.28 0C12.9 20.3 19 14.15 19 9a7 7 0 0 0-7-7Zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/>
+              </svg>
             </span>
             <span>West Lafayette, IN</span>
           </div>
 
           <div class="profile-detail">
             <span class="profile-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 2.5 7v2h19V7L12 2ZM5 10v7H3v2h18v-2h-2v-7h-3v7h-2.5v-7h-3v7H8v-7H5Zm-2.5 10v2h19v-2h-19Z" /></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2 2.5 7v2h19V7L12 2ZM5 10v7H3v2h18v-2h-2v-7h-3v7h-2.5v-7h-3v7H8v-7H5Zm-2.5 10v2h19v-2h-19Z"/>
+              </svg>
             </span>
             <span>Purdue University</span>
           </div>
@@ -125,109 +257,125 @@
 
           <div class="profile-detail">
             <span class="profile-icon" aria-hidden="true">G</span>
-            <a href="https://scholar.google.com/citations?user=UAwXOSIAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            <a
+              href="https://scholar.google.com/citations?user=UAwXOSIAAAAJ&hl=en&oi=ao"
+              target="_blank"
+              rel="noopener noreferrer">
+              Google Scholar
+            </a>
           </div>
 
           <div class="profile-detail">
             <span class="profile-icon orcid" aria-hidden="true">●</span>
-            <a href="https://orcid.org/0009-0008-6846-3008" target="_blank" rel="noopener noreferrer">ORCID</a>
+            <a
+              href="https://orcid.org/0009-0008-6846-3008"
+              target="_blank"
+              rel="noopener noreferrer">
+              ORCID
+            </a>
           </div>
 
           <div class="profile-detail">
             <span class="profile-icon linkedin" aria-hidden="true">in</span>
-            <a href="https://www.linkedin.com/in/hwijinbaldick/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a
+              href="https://www.linkedin.com/in/hwijinbaldick/"
+              target="_blank"
+              rel="noopener noreferrer">
+              LinkedIn
+            </a>
           </div>
+
         </div>
       </aside>
 
-      <div>
-        <p class="subtitle">My research focuses on hospitality analytics, AI-mediated decision making, digital platforms, and lodging experiences, using experimental and big data approaches.</p>
-        <div class="hero-meta">White Lodging–J.W. Marriott Jr. School of Hospitality and Tourism Management · Purdue University</div>
-      </div>
-    </div>
-  </section>
+      <div class="hero-about">
 
-  <section>
-    <div class="wrap two-col">
-      <div>
         <div class="section-title">About</div>
-        <p class="lede">I use experimental design, big data analytics, machine learning, and advanced statistical modeling to examine consumer behavior in hospitality and tourism.</p>
-        <div class="prose">
-          <p>My methodological approach integrates theory-driven inquiry with large-scale data analysis and data-intensive evidence to examine consumer decision making across hospitality environments, lodging experiences, digital platforms, and AI-mediated service contexts.</p>
-          <p>Through this approach, my research aims to advance hospitality theory, offer practical guidance for industry practice, and contribute to societal discussions about how digital platforms and AI systems shape consumer choice, service experiences, and value creation in hospitality and tourism.</p>
-        </div>
-      </div>
 
-      <div>
-        <div class="section-title">Research Profile</div>
-        <div class="stats">
-          <div class="stat"><strong>4</strong>Top-tier journal publications</div>
-          <div class="stat"><strong>4</strong>Core research interests</div>
+        <p class="hero-statement">
+          I use experimental design, big data analytics, machine learning, and advanced statistical modeling to examine consumer behavior in hospitality and tourism.
+        </p>
+
+        <p class="hero-description">
+          My research integrates theory-driven inquiry with data-intensive approaches to study consumer decision making across hospitality environments, digital platforms, lodging experiences, and AI-mediated service contexts.
+        </p>
+
+        <div class="hero-affiliation">
+          White Lodging–J.W. Marriott Jr. School of Hospitality and Tourism Management · Purdue University
         </div>
 
-        <div class="section-title awards-title">Awards</div>
-        <div class="stats">
-          <div class="stat"><strong>2025</strong>Teaching Academy Graduate Teaching Award</div>
-          <div class="stat">
-            <strong>2025</strong>
-            <a class="award-link" href="https://www.purdue.edu/hhs/htm-career-center/news-stories/celebrating-excellence-2025-outstanding-graduate-student-awards/" target="_blank" rel="noopener noreferrer">Outstanding Doctoral Student Teaching Award ↗</a>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
+
+  <!-- Research Interests -->
   <section>
     <div class="wrap">
+
       <div class="section-title">Research Interests</div>
-      <p class="lede">My research interests include hospitality analytics, AI-mediated decision making, digital platforms, and lodging experiences.</p>
 
-      <div class="grid">
-        <article class="card">
-          <h3>Hospitality Analytics</h3>
-          <p>Applies big data analytics, machine learning, and advanced statistical modeling to examine consumer behavior and industry trends in hospitality and tourism.</p>
+      <div class="research-interest-grid">
+
+        <article class="interest-card">
+          <h3>Hospitality Analytics &amp; Big Data</h3>
         </article>
 
-        <article class="card">
-          <h3>AI-Mediated Decision Making</h3>
-          <p>Investigates how AI-generated information, algorithmic recommendations, transparency, and trust influence consumer judgment and behavior.</p>
+        <article class="interest-card">
+          <h3>AI-Mediated Consumer Decision Making</h3>
         </article>
 
-        <article class="card">
-          <h3>Digital Platforms</h3>
-          <p>Studies how online platforms, review systems, search interfaces, and platform-mediated information environments shape consumer decisions.</p>
+        <article class="interest-card">
+          <h3>Technology-Enabled Service Innovation &amp; Digital Platforms</h3>
         </article>
 
-        <article class="card">
+        <article class="interest-card">
           <h3>Lodging Experiences</h3>
-          <p>Explores how hotel environments, service design, and experiential cues shape guest perception, memory, satisfaction, and behavioral outcomes.</p>
         </article>
+
       </div>
     </div>
   </section>
 
+
+  <!-- Featured Work -->
   <section>
     <div class="wrap">
+
       <div class="section-title">Featured Work</div>
-      <div class="grid">
-        <article class="card">
+
+      <div class="featured-grid">
+
+        <article class="featured-card">
           <h3>Academic Publications</h3>
-          <p>Explore peer-reviewed journal articles, manuscripts under review, and working papers in hospitality and tourism.</p>
-          <div class="meta"><a href="publication.html">Open academic publications →</a></div>
+          <p>
+            Peer-reviewed journal articles, manuscripts under review, and current research projects.
+          </p>
+          <a class="featured-link" href="publication.html">
+            View academic publications →
+          </a>
         </article>
 
-        <article class="card">
+        <article class="featured-card">
           <h3>Industry Publications</h3>
-          <p>Explore practitioner-facing CHRIBA Briefs and CHRIBA Insights developed for hospitality industry audiences.</p>
-          <div class="meta"><a href="publication.html#industry-publications">Open industry publications →</a></div>
+          <p>
+            Practitioner-facing CHRIBA Briefs and Insights translating research into industry applications.
+          </p>
+          <a class="featured-link" href="publication.html#industry-publications">
+            View industry publications →
+          </a>
         </article>
+
       </div>
     </div>
   </section>
+
 </main>
 
 <footer>
-  <div class="wrap">© 2026 Hwijin Baldick. All rights reserved.</div>
+  <div class="wrap">
+    © 2026 Hwijin Baldick. All rights reserved.
+  </div>
 </footer>
 
 </body>

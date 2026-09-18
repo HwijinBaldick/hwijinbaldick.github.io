@@ -1,90 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <title>Contact | Hwijin Baldick</title>
+
 <link rel="stylesheet" href="styles.css" />
 
 <style>
-  .contact-list {
+  .contact-page {
+    padding: 42px 0 72px;
+    border-bottom: 0;
+  }
+
+  .academic-layout {
     display: grid;
-    gap: 24px;
-    max-width: 720px;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 54px;
+    align-items: start;
   }
 
-  .contact-item {
-    margin: 0;
-    font-size: 17px;
+  /* Left Profile Sidebar */
+
+  .profile-sidebar {
+    position: sticky;
+    top: 104px;
   }
 
-  .contact-item strong {
-    display: block;
-    margin-bottom: 3px;
+  .profile-sidebar img {
+    width: 174px;
+    height: 174px;
+    object-fit: cover;
+    object-position: center 24%;
+    border-radius: 50%;
+    border: 5px solid #f2f2f2;
+    margin-bottom: 18px;
   }
 
-  .contact-item a {
+  .profile-sidebar h2 {
+    margin: 0 0 4px;
+    font-size: 1.2rem;
+  }
+
+  .profile-role {
+    margin: 0 0 20px;
+    color: #555555;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .profile-details {
+    display: grid;
+    gap: 9px;
+    color: #4f4f4f;
+    font-size: 0.98rem;
+  }
+
+  .profile-detail {
+    display: grid;
+    grid-template-columns: 18px minmax(0, 1fr);
+    gap: 8px;
+    align-items: center;
+  }
+
+  .profile-detail a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .profile-detail a:hover {
     color: #249cc5;
+  }
+
+  .profile-icon {
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #555555;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .profile-icon svg {
+    width: 15px;
+    height: 15px;
+    display: block;
+  }
+
+  .profile-icon.orcid {
+    color: #a6ce39;
+  }
+
+  .profile-icon.linkedin {
+    color: #0a66c2;
+  }
+
+  /* Right Contact Content */
+
+  .contact-content {
+    min-width: 0;
+    padding-top: 8px;
+  }
+
+  .contact-content h1 {
+    margin: 0;
+    font-size: clamp(34px, 5vw, 48px);
+    letter-spacing: -0.025em;
+  }
+
+  .contact-intro {
+    max-width: 720px;
+    margin: 18px 0 32px;
+    color: #444444;
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .contact-email {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .contact-email strong {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .contact-email a {
+    color: #249cc5;
+    text-decoration: none;
     border-bottom: 1px solid currentColor;
   }
 
-  .contact-item a:hover { opacity: 0.75; }
+  .contact-email a:hover {
+    opacity: 0.75;
+  }
+
+  @media (max-width: 760px) {
+    .academic-layout {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+
+    .profile-sidebar {
+      position: static;
+    }
+
+    .profile-sidebar img {
+      width: 132px;
+      height: 132px;
+    }
+
+    .contact-content {
+      padding-top: 0;
+    }
+  }
 </style>
+
 </head>
 
 <body>
 
 <header>
   <div class="wrap nav">
-    <a href="index.html" class="brand">Hwijin Baldick | Ph.D. Candidate</a>
+
+    <a href="index.html" class="brand">
+      Hwijin Baldick | Ph.D. Candidate
+    </a>
+
     <nav class="menu" aria-label="Site navigation">
       <a href="index.html">Home</a>
       <a href="publication.html">Publications</a>
       <a href="teaching.html">Teaching</a>
       <a href="contact.html" aria-current="page">Contact</a>
     </nav>
+
   </div>
 </header>
 
 <main>
-  <section class="page-hero">
-    <div class="wrap">
-      <div class="section-title">Contact</div>
-      <h1>Contact</h1>
-      <p class="subtitle">Professional contact details and academic profile links.</p>
-    </div>
-  </section>
 
-  <section>
-    <div class="wrap">
-      <div class="contact-list">
-        <p class="contact-item">
-          <strong>Email</strong>
-          <a href="mailto:jeon46@purdue.edu">jeon46@purdue.edu</a>
-        </p>
+<section class="contact-page">
 
-        <p class="contact-item">
-          <strong>Google Scholar</strong>
-          <a href="https://scholar.google.com/citations?user=UAwXOSIAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar profile</a>
-        </p>
+  <div class="wrap academic-layout">
 
-        <p class="contact-item">
-          <strong>ORCID</strong>
-          <a href="https://orcid.org/0009-0008-6846-3008" target="_blank" rel="noopener noreferrer">0009-0008-6846-3008</a>
-        </p>
+    <!-- Left Profile Sidebar -->
 
-        <p class="contact-item">
-          <strong>LinkedIn</strong>
-          <a href="https://www.linkedin.com/in/hwijinbaldick/" target="_blank" rel="noopener noreferrer">linkedin.com/in/hwijinbaldick</a>
-        </p>
+    <aside class="profile-sidebar" aria-label="Profile information">
+
+      <img
+        src="profile-hwijin-baldick.jpg"
+        alt="Portrait of Hwijin Baldick"
+      />
+
+      <h2>Hwijin Baldick</h2>
+
+      <p class="profile-role">
+        Ph.D. Candidate at Purdue University
+      </p>
+
+      <div class="profile-details">
+
+        <div class="profile-detail">
+          <span class="profile-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2a7 7 0 0 0-7 7c0 5.15 6.1 11.3 6.36 11.56a.9.9 0 0 0 1.28 0C12.9 20.3 19 14.15 19 9a7 7 0 0 0-7-7Zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/>
+            </svg>
+          </span>
+
+          <span>West Lafayette, IN</span>
+        </div>
+
+        <div class="profile-detail">
+          <span class="profile-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2 2.5 7v2h19V7L12 2ZM5 10v7H3v2h18v-2h-2v-7h-3v7h-2.5v-7h-3v7H8v-7H5Zm-2.5 10v2h19v-2h-19Z"/>
+            </svg>
+          </span>
+
+          <span>Purdue University</span>
+        </div>
+
+        <div class="profile-detail">
+          <span class="profile-icon" aria-hidden="true">✉</span>
+          <a href="mailto:jeon46@purdue.edu">Email</a>
+        </div>
+
+        <div class="profile-detail">
+          <span class="profile-icon" aria-hidden="true">G</span>
+
+          <a
+            href="https://scholar.google.com/citations?user=UAwXOSIAAAAJ&hl=en&oi=ao"
+            target="_blank"
+            rel="noopener noreferrer">
+            Google Scholar
+          </a>
+        </div>
+
+        <div class="profile-detail">
+          <span class="profile-icon orcid" aria-hidden="true">●</span>
+
+          <a
+            href="https://orcid.org/0009-0008-6846-3008"
+            target="_blank"
+            rel="noopener noreferrer">
+            ORCID
+          </a>
+        </div>
+
+        <div class="profile-detail">
+          <span class="profile-icon linkedin" aria-hidden="true">in</span>
+
+          <a
+            href="https://www.linkedin.com/in/hwijinbaldick/"
+            target="_blank"
+            rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </div>
+
       </div>
+
+    </aside>
+
+
+    <!-- Right Contact Content -->
+
+    <div class="contact-content">
+
+      <h1>Contact</h1>
+
+      <p class="contact-intro">
+        For academic inquiries, research collaboration, or professional correspondence, please feel free to contact me by email.
+      </p>
+
+      <p class="contact-email">
+        <strong>Email</strong>
+        <a href="mailto:jeon46@purdue.edu">
+          jeon46@purdue.edu
+        </a>
+      </p>
+
     </div>
-  </section>
+
+  </div>
+
+</section>
+
 </main>
 
 <footer>
-  <div class="wrap">© 2026 Hwijin Baldick. All rights reserved.</div>
+  <div class="wrap">
+    © 2026 Hwijin Baldick. All rights reserved.
+  </div>
 </footer>
 
 </body>
+
 </html>
